@@ -1,0 +1,19 @@
+header {
+    background: #BBBBBB;
+}
+//a configuração inline o conteúdo da tag tem o tamanho do conteúdo dali
+//a configuração in block tem a 100% da página
+
+nav li { 
+    display: inline;
+    margin: 0 0 0 15px
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+
+}
