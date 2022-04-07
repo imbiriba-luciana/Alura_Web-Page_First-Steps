@@ -1,12 +1,26 @@
 header {
     background: #BBBBBB;
+    padding: 20 px 0;
 }
+
 //a configuração inline o conteúdo da tag tem o tamanho do conteúdo dali
 //a configuração in block tem a 100% da página
 
+.caixa {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top:110px;
+    right:0;
+}
+
 nav li { 
     display: inline;
-    margin: 0 0 0 15px
+    margin: 0 0 0 15px // topo, direita, baixo, esquerda
 }
 
 nav a {
