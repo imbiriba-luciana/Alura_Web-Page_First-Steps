@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="UTF-8">
         <title> Produtos - Barbearia Alura</title>
+
         <link rel="stylesheet" href="reset.css"> <!--ordem importa, como esse limpa códigos automaticamente definidos, precisa vir primeiro-->
         <link rel="stylesheet" href="produtos.css">
     </head>
@@ -21,24 +21,36 @@
                  </nav>
             </div>
         </header>
+
         <main>
-            <ul>
+            <ul class="produtos">
                 <li>
                     <h2>Cabelo</h2>
                     <img src="cabelo.jpg">
-                    <p>Na tesoura ou máquina, como o cliente preferir</p>
-                    <p>R$ 25,00</p>
+                    <p class="produto-descricao">Na tesoura ou máquina, como o cliente preferir</p>
+                    <p class="produto-preco">R$ 25,00</p>
+                </li>
+                <li>
                     <h2>Barba</h2>
-                    <img src="barbajpg">
-                    <p>Corte e desenho profissional de barba</p>
-                    <p>R$ 18,00</p>
+                    <img src="barba.jpg">
+                    <p class="produto-descricao">Corte e desenho profissional de barba</p>
+                    <p class="produto-preco">R$ 18,00</p>
+                </li>
+                <li>
                     <h2>Cabelo + Barba</h2>
                     <img src="cabelo+barba.jpg">
-                    <p>Pacote completo de cabelo e barba</p>
-                    <p>R$ 35,00</p>
+                    <p class="produto-descricao">Pacote completo de cabelo e barba</p>
+                    <p class="produto-preco">R$ 35,00</p>
                 </li>
-                
             </ul>
         </main>
     </body>
 </html>
+
+// configuração inline o conteúdo da tag tem o tamanho do conteúdo dali
+// configuração in block tem a 100% da página
+// o html entede o tamanho em percentuais na página
+// o padding aumenta o conteúdo e portanto o espaço interno do objeto
+// a borda é posicionada entre o padding e a margem
+// CSS é feito para a apresentação
+// comportamento é javascript
