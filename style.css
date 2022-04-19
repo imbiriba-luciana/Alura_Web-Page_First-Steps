@@ -1,65 +1,225 @@
-
-#banner{
-    
-    width: 100%;
-
+header {
+	background: #BBBBBB;
+	padding: 20px 0;
 }
 
-body {
+.caixa {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+}
 
-    background: #CCCCCC;
-    padding: 30px;
+nav {
+	position: absolute;
+	top: 110px;
+	right: 0;
+}
 
+nav li {
+	display: inline;
+	margin: 0 0 0 15px;
+}
+
+nav a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+.produtos {
+	width: 940px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.produtos li {
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	margin: 0 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	border: 2px solid #000000;
+	border-radius: 10px;
+}
+
+.produtos li:hover {
+	border-color: #C78C19;
+}
+
+.produtos li:active {
+	border-color: #088C19;	
+}
+
+.produtos li:hover h2 {
+	font-size: 34px;
+}
+
+.produtos h2 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.produto-descricao {
+	font-size: 18px;
+}
+
+.produto-preco {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+footer {
+	text-align: center;
+	background: url("bg.jpg");
+	padding: 40px 0;
+}
+
+.copyright {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+/* Página de contato */
+.contato {
+	width: 940px;
+	margin: 40px auto;
+}
+
+.contato label, .input-group legend {
+	display: block;
+	margin: 0 0 5px;
+	font-size: 20px;
+}
+
+.campo-padrao, textarea {
+	display: block;
+	margin: 0 0 30px;
+	padding: 10px 20px;
+	width: 50%;
+	border: 1px solid #aaa;
+}
+
+.input-group {
+	margin: 0 0 20px;
+}
+
+.newsletter {
+	margin: 0 0 20px;
+}
+
+.botao {
+	margin: 20px 0 0;
+	width: 30%;
+	padding: 10px 20px;
+	font-size: 24px;
+	display: inline-block;
+	background: orange;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	transition: 1s;
+}
+
+.botao:hover {
+	cursor: pointer;
+	transform: scale(1.2);	
+}
+
+.funcionamento {
+	width: 940px;
+	margin: 0 auto 40px;
+}
+
+table {
+	margin: 10px 0 0;
+}
+
+th  {
+	background: #777777;
+	color: #FFFFFF;
 }
 
 
-h1 {
-
-    text-align: center;
+td, th {
+	border: 1px solid #000000;
+	padding: 5px 20px;
 }
 
-p {
-
-    text-align: center;
+main {
+	width: 940px;
+	margin: 0 auto;
 }
 
-#missao {
-    font-size: 20px;
+form {
+	margin: 40px 0;
 }
 
-em strong {
-    color: #FF0000;
+form label, form p {
+	display: block;
+	font-size: 20px;
+	margin: 0 0 10px;
 }
 
-.itens {
-    font-style: italic;
+.input-padrao { 
+	display: block;
+	margin: 0 0 20px;
+	font-size: 15px;
+	padding: 10px 25px;
+	width: 50%;
 }
 
-.beneficios {
+/* o block foi bom para criar o estilo do input do tipo texto, área, submit.
+Mas para o input do tipo radio isso atrapalha.
+Então, para deixar mais específico é só criar uma classe para os inputs que considerar padrão,
+E deixar o radio sem a classe.*/
 
-    background: white;
-    padding: 20px;
+.checkbox {
+	margin: 20px 0;
 }
 
-h2 {
-    text-align: center;
+.enviar {
+	width: 40%;
+	padding: 15px 0;
+	background: orange;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	transition: 1s all; 
+	/*aqui a transição de cor do botão enviar ao passar o mouse por cima se torna de 1 segundo.*/
+	cursor: pointer; /*aqui define que o mouse por cima muda e seta para mãozinha*/
 }
 
-ul {
-    display: inline-block;
-    vertical-align: top;
-    width: 20%;
-    margin-right: 15%;
+.enviar:hover{
+	background: darkorange;
+	transform: scale(1.2)  /*aqui vai aumentar em 20% o tamanho do botão de enviar*/
+	/* transform: rotate(70deg) é outra propriedade que nesse caso vai girar o botão, sempre dado em graus, por isso "deg".*/
+	/*Atentar que a última propriedade sempre sobrescreve a anterior, porque no CSS a leitura é feita de baixo pra cima*/
+	/*Se quiser que as propriedades ocorram juntas, tem que colocar uma após a outra*/
 }
 
-.imagembeneficios {
-    width: 50%;
+table {
+	margin: 20px 0 40px;
 }
 
-.titulo-principal {
-    padding-left: 20px;
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
 }
 
-.titulo-centralizado {
-    text-align: center
-}
+td, th {
+    border: 1px solid #000000;
+    padding: 8px 15px;

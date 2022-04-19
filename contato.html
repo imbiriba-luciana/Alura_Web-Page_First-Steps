@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Contato</title>
+
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<div class="caixa">
+				<h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1> 
+                <!--o alt introduz o texto alternativo para acessibilidade de usuários com baixa capacidade visual-->
+
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="produtos.html">Produtos</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+        <main>
+            <form>
+                <label for="nomesobrenome">Nome e Sobrenome</label>
+                <input type="text" id="nomesobrenome" class="input-padrao" required> <!-- required é colocado no input do campo que eu preciso tornar obrigatório
+                E placeholder será a sugestão de como que responde o campo-->
+
+                <label for="email">Email</label>
+                <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.br">
+                
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+
+                <label for="mensagem">Mensagem</label>
+                <textarea cols="70" rows="10" id="mensagem" class="input-padrao"></textarea>
+
+            <fieldset> <!--pode substituir a div para agrupar pedaçoes do código-->
+                <legend>Como prefere o nosso contato?</legend> <!--aqui o título se chama legend-->
+
+                <!--<label for="radio-email">Email</label>
+                <input type="radio" name="contato" value="email" id="radio-email">--> 
+                
+                <!--O jeito acima deixa coloca a a caixinha de seleção após o label, mas queremos antes.
+                Para isso, colocamos o código do input dentro de label, do jeito que ficou abaixo-->
+
+                <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
+                 
+
+                <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
+                
+
+                <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+                
+            </fieldset>  
+
+            <fieldset>
+
+            <legend>Qual horário prefere ser atendido?</legend>
+            <select>
+                <option>Manhã</option>
+                <option>Tarde</option>
+                <option>Noite</option>
+            </select>
+
+            </fieldset>
+
+                <!-- <input type="submit"> cria um botão para submeter as informações inseridas no input para o servidor, ou banco de dados, whatever.
+                    Mas automaticamente ele sempre traduz para o idioma reconhecido do local.
+                    Para garantir que esse idioma não será alterado, é necessário adicionar um "value" a esse "submit", que nada mais será que a mensagem exata que vai aparecer nesse botão-->
+                
+                <label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por e-mail?</label>
+
+                <input type="submit" value="Enviar Formulário" class="enviar">          
+                
+                <!--label e input sempre andam juntos!
+                    --por isso o input recebe uma id, e o label recebe um for para essa id.
+                    --isso cria a opção de clicar no label e o cursor aparecer dentro do input.
+                    --isso facilita quando há muita coisa na tela, ou quando os elementos são pequenos.-->
+            </form>
+
+            <table> <!--tag para iniciar as instruções de uma tabela-->
+                <thead>
+                    <tr> <!--cria a linha-->
+                        <th>Dia</th> <!--cria a célula. A primeira geralmente é o cabeçalho, ou título da coluna, por isso recebe nome th-->
+                        <th>Horário</th> <!-- mas th só vai existir dentro de thread-->
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>Segunda</td>
+                        <td>8h-20h</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta</td>
+                        <td>8h-20h</td>
+                    </tr>
+                    <tr>
+                        <td>Sexta</td>
+                        <td>8h-20h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+      
+<footer>
+    <img src="logo-branco.png" alt="Logo da Barbearia Alura">
+    <p class="copyright">&copy; Copyright Barbearia Alura - 2019</p>
+</footer>
+</body>
+</html>
