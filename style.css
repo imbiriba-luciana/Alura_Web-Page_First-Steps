@@ -1,3 +1,7 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
 header {
 	background: #BBBBBB;
 	padding: 20px 0;
@@ -156,9 +160,9 @@ td, th {
 	padding: 5px 20px;
 }
 
-main {
-	width: 940px;
-	margin: 0 auto;
+main { /* Ao remover os estilos de main, a página espicha ocupando de lado a lado.
+	E deixa de se comportar como um bloco.*/
+	
 }
 
 form {
@@ -223,3 +227,152 @@ thead {
 td, th {
     border: 1px solid #000000;
     padding: 8px 15px;
+}
+
+/* CSS da página inicial */
+
+.banner {
+	width: 100%;
+}
+
+.titulo-principal { 
+	text-align: center;
+	font-size: 2em;
+	margin: 0 0 1em;
+	clear: left;
+	/*medidas proporcionais no CSS, com percentual é uma medida proporcional. 
+	mas uma fonte que seja o dobro da fonte padrão. Então, indepedente do tamanho que será a fonte padrão
+	se usará em, que é relativo a medida proporcional em pixels. 
+	Ou seja, se tenho uma fonte de X pixels, quando eu usar o "em", o CSS entende que esse é em vai 
+	referente à fonte (que é dada em pixels)*/
+	/*text-shadow: 2px 2px #FF0000; Para criar sombra em letras*/
+}
+
+/*.titulo-principal::first-letter { /*titulo-principal é o elemento, e first-letter é o psudo-elemento
+	font-weight: bold;
+}
+
+p::first-line {
+	font-style: italic; aqui faz a primeira linha de todos os parágrafos ficarem todo em itálico, também com pseudo-elemento
+}*/
+
+.titulo-principal:before {
+	content: "[";
+}
+
+.titulo-principal:after {
+	content: "]";
+} 
+
+
+.principal {
+	padding: 3em 0;
+	background: #FEFEFE;
+	width: 940px;
+	margin: 0 auto;
+}
+
+.principal p {
+	margin: 0 0 1em;
+}
+
+.principal strong {
+	font-weight: bold;
+}
+
+.principal em {
+	font-style: italic;
+}
+
+.utensilios {
+	width: 120px;
+	float: left;
+	margin: 0 20px 20px 0; /* cima, direita, baixo, esquerda */
+	/*o float é um comportamento que descola a imagem da paǵina,
+	mas deixa a sombra dela abaixo, de modo que é possível o texto subir 
+	e ocupar a mesma linha da imagem, porém sem invadir o espaço da sombra da imagem.
+	ATENÇÃO: o float quando usado vai afetar o comportamento de todos os elementos abaixo dele,
+	para evitar que isso aconteça é necessário acrescentar a instrução "clear" antes do float */
+}
+
+.mapa {
+	padding: 3em 0;
+	background: linear-gradient(#FEFEFE,#888888);
+	/*o gradiente pode ser linear, e variar em degraus, ou seja, assim pode ser colocado na diagonal.
+	Tambeḿ pode ser do tipo "radial", que faz gradiente em círculo, e nessa caso não tem degraus.
+	E se colocar a porcentagem após a cor, ainda define quantos porcento quer que ocupe na página.*/	
+}
+
+.mapa-conteudo {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.beneficios {
+	padding: 3em 0;
+	background: #888888;
+}
+
+.conteudo-beneficios {
+	width: 640px;
+	margin: 0 auto;
+}
+
+.lista-beneficios {
+	width: 40%;
+	display: inline-block;
+	/*o inline-block interpreta tudo, até o espaço vazio no código que esteja antes dele na linha do código.
+	Se a intenção for deixar um conteúdo do inline-block ao lado do outro, como é o caso dessa imagem,
+	será preciso colocar esse conteúdo (imagem), na mesma linha do código do conteúdo que eu quero que fique ao lado*/
+	vertical-align: top; 
+	/* Esse irá colocar a lista mais acima, do contrário ela fica no canto esquerda da imagem.*/
+}
+
+.itens {
+	line-height: 1.5; /*altera a altura da linha*/
+}
+
+/*.itens:first-child { Esse é um pseudo-elemento. Ele tem algumas opções. Por exemplo, pode ser dito exatamente a posição do elemento 
+	então first, second, etc. Ou também pode usar o nth-child(), e nesse vai colocar o número da posição entre os parêntetes.
+	Ou também pode usar 2n, que simboliza todos os pares.
+	font-weight: bold;
+}*/
+
+.itens:before {
+	content: "✭";
+}
+
+.imagem-beneficios {
+	width: 60%;
+	opacity: 1;
+	transition: 400 ms;
+	box-shadow: 10px 10px 5px #000000;
+}
+
+.imagem-beneficios:hover {
+	opacity: 0.3;
+}
+
+.mapa p {
+	margin: 0 0 2em;
+	text-align: center;
+}
+
+.video {
+	width: 560px;
+	margin: 2em auto;
+
+}
+
+
+
+/*main > p { /* Aqui sefor "main p" significa todos os p dentro de main
+	Se colocar "main > p" significa os filhos diretos.
+	background: red; 
+}*/
+
+@media screen and (max-width: 480px) {
+	body {
+		background:red
+	}
+}
